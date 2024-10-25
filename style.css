@@ -7,13 +7,13 @@
     --margin: 3vw;
     --marginMobile: 4vw;
 
-    --desktopFontSize: 20px;
+    --desktopFontSize: calc(13px + 0.390625vw);;
 }
 
 
 @font-face {
     font-family: "AkkuratPro-Light";
-    src: url("data/fonts/Akkurat_Pro_Regular.otf") format("opentype");
+    src: url("data/fonts/Akkurat_Pro_Light.woff") format("woff");
 }
 
 #cursor {
@@ -253,6 +253,26 @@ main{
 
 
 /*Versão 2*/
+html,
+body{
+    overscroll-behavior-y: contain ;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "AkkuratPro-Light";
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+main{
+    position: relative;
+}
+
+
+/*Grelha*/
 .grid{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
