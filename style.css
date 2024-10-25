@@ -299,14 +299,6 @@ p{
 }
 
 
-/*Screens*/
-
-.introSelvagem .grid{
-    height: calc(100vh - 5vh);
-}
-
-
-/* Estilo inicial para as divs */
 /* Estilo inicial para as divs */
 #introSelvagem {
     display: block;
@@ -348,6 +340,7 @@ p{
 #buttonStart{
     text-decoration: underline;
 }
+
 
 /*Experiência*/
 .faixaNum{
