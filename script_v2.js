@@ -12,5 +12,5 @@ buttonStart.addEventListener('click', () => {
         setTimeout(() => {
             selvagemProgram.style.opacity = '1';
         }, 50); 
-    }, 700); 
+    }, 400); 
 });
