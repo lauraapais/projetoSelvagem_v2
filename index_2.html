@@ -10,9 +10,11 @@
 <body>
     <main>
         <!--INTRO-->
-        <div class=introSelvagem>
+        <div class="introSelvagem visible" id="introSelvagem">
             <div class="teaser">
-                <img src="data/faixas/1/selvagem.png">
+                <video autoplay loop muted>
+                    <source src="data/teaser.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="grid">
                 <div>
@@ -52,12 +54,18 @@
                 <div class="col-10">
                     <p>Luz</p>
                 </div>
+                <div class="col-10">
+                    <p id="buttonStart">Começa a</p>
+                    <p class="textAlignRight" id="buttonStart">experiência</p>
+                </div>
             </div>
         </div>
-        <!--EXPERIÊNCIA-->
-        <div class="selvagemProgram">
+        <!-- EXPERIÊNCIA -->
+        <div class="selvagemProgram hidden" id="selvagemProgram">
             <div class="teaser">
-                <img src="data/faixas/1/selvagem.png">
+                <video autoplay loop muted>
+                    <source src="data/teaser.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="grid">
                 <div>
@@ -86,11 +94,13 @@
                 </div>
             </div>
         </div>
-
+        
         <!--LEGENDAS-->
-        <div class="selvagemSubtitles">
+        <div class="selvagemSubtitles hidden" id="selvagemSubtitles">
             <div class="teaser">
-                <img src="data/faixas/1/selvagem.png">
+                <video autoplay loop muted>
+                    <source src="data/teaser.mp4" type="video/mp4">
+                  </video>
             </div>
             <div class="grid">
                 <div>
@@ -141,9 +151,11 @@
 
         </div>
         <!--OUTRO-->
-        <div class=outroSelvagem>
+        <div class="outroSelvagem hidden" id="outroSelvagem">
             <div class="teaser">
-                <img src="data/faixas/1/selvagem.png">
+                <video autoplay loop muted>
+                    <source src="data/teaser.mp4" type="video/mp4">
+                  </video>
             </div>
             <div class="grid">
                 <div>
@@ -295,6 +307,7 @@
     <div id="cursor"></div>
     <script src="js/cursor.js"></script>
     <script src="js/mobileWeight.js"></script>
+    <script src="script_v2.js"></script>
 </body>
 
 </html>
