@@ -13,10 +13,10 @@
         <div class="introSelvagem visible" id="introSelvagem">
             <div class="teaser">
                 <video autoplay loop muted>
-                    <source src="data/teaser.mp4" type="video/mp4">
+                    <source src="data/teaser_crop.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="grid">
+            <div class="grid gridIntro">
                 <div>
                     <p>Marco</p>
                     <p>Martins</p>
@@ -51,14 +51,14 @@
                     <p class="textAlignRight">de</p>
                     <p>Salvador Santos</p>
                 </div>
-                <div class="col-10">
+                <div class="col-10-desktop">
                     <p>Luz</p>
+                    <div id="buttonStart">
+                    <p>Começa a</p>
+                    <p class="textAlignRight">experiência</p>
+                    </div>
                 </div>
-                <div class="col-10">
-                    <div class="buttonStart">
-                    <p id="buttonStart">Começa a</p>
-                    <p class="textAlignRight" id="buttonStart">experiência</p>
-                </div>
+                
                 </div>
             </div>
         </div>
@@ -66,10 +66,10 @@
         <div class="selvagemProgram hidden" id="selvagemProgram">
             <div class="teaser">
                 <video autoplay loop muted>
-                    <source src="data/teaser.mp4" type="video/mp4">
+                    <source src="data/teaser_crop.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="grid">
+            <div class="grid gridProgram">
                 <div>
                     <p class="textAlignRight faixaNum">01</p>
                     <p class="textAlignRight faixaNum">02</p>
@@ -101,16 +101,15 @@
         <div class="selvagemSubtitles hidden" id="selvagemSubtitles">
             <div class="teaser">
                 <video autoplay loop muted>
-                    <source src="data/teaser.mp4" type="video/mp4">
+                    <source src="data/teaser_crop.mp4" type="video/mp4">
                   </video>
             </div>
-            <div class="grid">
-                <div>
+            <div class="grid gridSubtitles">
                     <p class="textAlignRight faixaNum">10</p>
-                </div>
-                <div class="col-2-width">
                     <p>Arqueologia</p>
-                    <div class="subtitlesContainer leftPad">
+                    
+                <div class="col-2-width" id="legendas1">
+                    <div class="subtitlesContainer rightPad">
                         <p>Não encontramos outra utilidade nesta geografia ausente.
                             As maternidades são hospitais inúteis e a escola primária
                             foi entregue a uma associação de caçadores.
@@ -119,27 +118,24 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-2-width">
-                    <p class="visibiltyNone">Blank</p>
-                    <div class="subtitlesContainer leftPad">
+                <div class="col-2-width" id="legendas2">
+                    <div class="subtitlesContainer rightPad">
                         <p>Os dois estranhos que invadiram a rotina desta tarde
                             são um acontecimento que ainda não deixou de usar
                             uma língua estrangeira em assuntos imobiliários.
                         </p>
                     </div>
                 </div>
-                <div class="col-2-width">
-                    <p class="visibiltyNone">Blank</p>
-                    <div class="subtitlesContainer leftPad">
+                <div class="col-2-width" id="legendas3">
+                    <div class="subtitlesContainer rightPad">
                         <p>A miúda levou-lhes o menu e desinteressou-se deles.
                             Ocupou-se por instantes com o jornal como se percorresse
                             por obrigação as salas enfastiadas de um museu.
                         </p>
                     </div>
                 </div>
-                <div class="col-2-width">
-                    <p class="visibiltyNone">Blank</p>
-                    <div class="subtitlesContainer subtitlesSelected leftPad">
+                <div class="col-2-width" id="legendas4">
+                    <div class="subtitlesContainer subtitlesSelected rightPad">
                         <p>Os italianos talvez comprem uma ruína e voltem a erguer
                             as paredes, mas não haverá crianças por cá.
                             A única novidade serão eles, a casa que irão comprar e mais nada.
@@ -156,7 +152,7 @@
         <div class="outroSelvagem hidden" id="outroSelvagem">
             <div class="teaser">
                 <video autoplay loop muted>
-                    <source src="data/teaser.mp4" type="video/mp4">
+                    <source src="data/teaser_crop.mp4" type="video/mp4">
                   </video>
             </div>
             <div class="grid">
