@@ -306,7 +306,7 @@ p{
 
 /* Estilo inicial para as divs */
 #introSelvagem {
-    display: block;
+    display: none;
     opacity: 1;
     transition: opacity 0.5s ease; 
 }
@@ -318,7 +318,7 @@ p{
 }
 
 #selvagemSubtitles {
-    display: none;
+    display: block;
 }
 
 #outroSelvagem {
