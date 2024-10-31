@@ -7,7 +7,8 @@
     --margin: 3vw;
     --marginMobile: 4vw;
 
-    --desktopFontSize: calc(11px + 0.390625vw);;
+    --desktopFontSize: calc(11px + 0.390625vw);
+    --mobileFontSize: calc(15px + 0.390625vw);;
     --marginTop: 5vh;
 }
 
@@ -401,9 +402,15 @@ p{
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
+    p{
+        font-size: var(--mobileFontSize) ;
+        color: white;
+    }
+
+
     .gridIntro {
         grid-template-columns: repeat(3, 1fr)!important; 
-        height: calc(100vh - var(--marginTop));
+        height: calc(var(--vh, 1h)* 100 - var(--marginTop));
     }
 
     .gridIntro .col-10-desktop {
