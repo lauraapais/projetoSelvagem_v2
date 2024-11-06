@@ -54,60 +54,215 @@
                 <div class="col-10-desktop">
                     <p>Luz</p>
                     <div id="buttonStart">
-                    <p>Começa a</p>
-                    <p class="textAlignRight">experiência</p>
+                        <p>Começa a</p>
+                        <p class="textAlignRight">experiência</p>
                     </div>
                 </div>
-                
-                </div>
             </div>
+        </div>
         </div>
         <!-- EXPERIÊNCIA -->
         <div class="selvagemProgram hidden" id="selvagemProgram">
             <div class="teaser">
-                <video autoplay loop muted>
-                    <source src="data/teaser_crop.mp4" type="video/mp4">
-                </video>
+                <div>
+                     <div>
+        <div id="loadingText" class="loading-text" style="display: none;">Loading...</div>
+
+        <div class="divTop slider">
+            <div class="progress" id="progressTop"></div>
+            <p>Jazz</p>
+        </div>
+        <div class="divRight slider">
+            <div class="progress" id="progressRight"></div>
+            <p>Video</p>
+        </div>
+        <div class="divBottom slider">
+            <div class="progress" id="progressBottom"></div>
+            <p>Legendas</p>
+        </div>
+        <div class="divLeft slider">
+            <div class="progress" id="progressLeft"></div>
+            <p>Poesia</p>
+        </div>
+
+        <div class="track">
+            <div class="faixas">
+                <p class="hover-link faixa" data-track="faixa1">1</p>
+                <p class="hover-link faixa" data-track="faixa2">2</p>
+                <p class="hover-link faixa" data-track="faixa3">3</p>
+                <p class="hover-link faixa" data-track="faixa4">4</p>
+                <p class="hover-link faixa" data-track="faixa5">5</p>
+                <p class="hover-link faixa" data-track="faixa6">6</p>
+                <p class="hover-link faixa" data-track="faixa7">7</p>
+                <p class="hover-link faixa" data-track="faixa8">8</p>
             </div>
-            <div class="grid gridProgram">
-                <div>
-                    <p class="textAlignRight faixaNum">01</p>
-                    <p class="textAlignRight faixaNum">02</p>
-                    <p class="textAlignRight faixaNum">03</p>
-                    <p class="textAlignRight faixaNum">04</p>
-                    <p class="textAlignRight faixaNum">05</p>
-                    <p class="textAlignRight faixaNum">06</p>
-                    <p class="textAlignRight faixaNum">07</p>
-                    <p class="textAlignRight faixaNum">08</p>
-                    <p class="textAlignRight faixaNum">09</p>
-                    <p class="textAlignRight faixaNum">10</p>
-                </div>
-                <div>
-                    <p>Luz</p>
-                    <p>Fim de Tarde</p>
-                    <p>Instantâneo</p>
-                    <p>Dependência /<br>Correntes <br>Marítimas</p>
-                    <p>Periferia</p>
-                    <p>O Cão Sozinho</p>
-                    <p>Canção dos <br>Brancos Negros</p>
-                    <p>Altura</p>
-                    <p>Humanidade</p>
-                    <p>Arqueologia</p>
-                </div>
+
+            <svg class="hover-link" id="startButton" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 24">
+                <defs>
+                </defs>
+                <g>
+                    <polygon class="cls-1" points="1 1 1 23 17 12 1 1" />
+                </g>
+            </svg>
+
+            <!----------------------------------------Track 1---------------------------------------->
+            <div id="faixa1" class="track1 mediaTrack">
+                <video class="video" muted loop data-src="data/faixas/1/1_2.mp4">
+                </video>
+                <video class="legendas" muted loop data-src="data/faixas/1/legendas.mp4">
+                </video>
+                <audio class="poesia" loop>
+                    <source src="data/faixas/1/audio1.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="jazz" loop>
+                    <source src="data/faixas/1/BradMehldau_AfterBach.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!----------------------------------------Track 2---------------------------------------->
+            <div id="faixa2" class="track2 mediaTrack">
+                <video class="video" muted loop data-src="data/faixas/2/2.mp4">
+                </video>
+                <video class="legendas" muted loop data-src="data/faixas/1/legendas.mp4">
+                </video>
+                <audio class="poesia" loop>
+                    <source src="data/faixas/1/audio1.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="jazz" loop>
+                    <source src="data/faixas/1/BradMehldau_AfterBach.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!----------------------------------------Track 3---------------------------------------->
+            <div id="faixa3" class="track3 mediaTrack">
+                <video class="video" muted loop data-src="data/faixas/3/3.mp4">
+                </video>
+                <video class="legendas" muted loop data-src="data/faixas/1/legendas.mp4">
+                </video>
+                <audio class="poesia" loop>
+                    <source src="data/faixas/1/audio1.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="jazz" loop>
+                    <source src="data/faixas/1/BradMehldau_AfterBach.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!----------------------------------------Track 4---------------------------------------->
+            <div id="faixa4" class="track4 mediaTrack">
+                <video class="video" muted loop data-src="data/faixas/4/4.mp4">
+                </video>
+                <video class="legendas" muted loop data-src="data/faixas/1/legendas.mp4">
+                </video>
+                <audio class="poesia" loop>
+                    <source src="data/faixas/1/audio1.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="jazz" loop>
+                    <source src="data/faixas/1/BradMehldau_AfterBach.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!----------------------------------------Track 5---------------------------------------->
+            <div id="faixa5" class="track5 mediaTrack">
+                <video class="video" muted loop data-src="data/faixas/5/5.mp4">
+                </video>
+                <video class="legendas" muted loop data-src="data/faixas/1/legendas.mp4">
+                </video>
+                <audio class="poesia" loop>
+                    <source src="data/faixas/1/audio1.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="jazz" loop>
+                    <source src="data/faixas/1/BradMehldau_AfterBach.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!----------------------------------------Track 6---------------------------------------->
+            <div id="faixa6" class="track6 mediaTrack">
+                <video class="video" muted loop data-src="data/faixas/6/6.mp4">
+                </video>
+                <video class="legendas" muted loop data-src="data/faixas/1/legendas.mp4">
+                </video>
+                <audio class="poesia" loop>
+                    <source src="data/faixas/1/audio1.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="jazz" loop>
+                    <source src="data/faixas/1/BradMehldau_AfterBach.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!----------------------------------------Track 7---------------------------------------->
+            <div id="faixa7" class="track7 mediaTrack">
+                <video class="video" muted loop data-src="data/faixas/5/5.mp4">
+                </video>
+                <video class="legendas" muted loop data-src="data/faixas/1/legendas.mp4">
+                </video>
+                <audio class="poesia" loop>
+                    <source src="data/faixas/1/audio1.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="jazz" loop>
+                    <source src="data/faixas/1/BradMehldau_AfterBach.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!----------------------------------------Track 8---------------------------------------->
+            <div id="faixa8" class="track8 mediaTrack">
+                <video class="video" muted loop data-src="data/faixas/4/4.mp4">
+                </video>
+                <video class="legendas" muted loop data-src="data/faixas/1/legendas.mp4">
+                </video>
+                <audio class="poesia" loop>
+                    <source src="data/faixas/1/audio1.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="jazz" loop>
+                    <source src="data/faixas/1/BradMehldau_AfterBach.mp3" type="audio/mpeg">
+                </audio>
             </div>
         </div>
-        
+        </div>
+                </div>
+                <div class="grid gridProgram faixas">
+                    <div>
+                        <p class="hover-link faixa textAlignRight faixaNum" data-track="faixa1">01</p>
+                        <p class="hover-link faixa textAlignRight faixaNum" data-track="faixa2">02</p>
+                        <p class="hover-link faixa textAlignRight faixaNum" data-track="faixa3">03</p>
+                        <p class="hover-link faixa textAlignRight faixaNum" data-track="faixa4">04</p>
+                        <p><br></p>
+                        <p><br></p>
+                        <p class="hover-link faixa textAlignRight faixaNum" data-track="faixa5">05</p>
+                        <p class="hover-link faixa textAlignRight faixaNum" data-track="faixa6">06</p>
+                        <p class="hover-link faixa textAlignRight faixaNum" data-track="faixa7">07</p>
+                        <p><br></p>
+                        <p class="hover-link faixa textAlignRight faixaNum" data-track="faixa8">08</p>
+                        <p class="hover-link faixa textAlignRight faixaNum" data-track="faixa9">09</p>
+                        <p class="hover-link faixa textAlignRight faixaNum" data-track="faixa10">10</p>
+                    </div>
+                    <div>
+                        <p>Luz</p>
+                        <p>Fim de Tarde</p>
+                        <p>Instantâneo</p>
+                        <p>Dependência /<br>Correntes <br>Marítimas</p>
+                        <p>Periferia</p>
+                        <p>O Cão Sozinho</p>
+                        <p>Canção dos <br>Brancos Negros</p>
+                        <p>Altura</p>
+                        <p>Humanidade</p>
+                        <p>Arqueologia</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <!--LEGENDAS-->
         <div class="selvagemSubtitles hidden" id="selvagemSubtitles">
             <div class="teaser">
                 <video autoplay loop muted>
                     <source src="data/teaser_crop.mp4" type="video/mp4">
-                  </video>
+                </video>
             </div>
             <div class="grid gridSubtitles">
-                    <p class="textAlignRight faixaNum">10</p>
-                    <p>Arqueologia</p>
-                    
+                <p class="textAlignRight faixaNum">10</p>
+                <p>Arqueologia</p>
+
                 <div class="col-2-width" id="legendas1">
                     <div class="subtitlesContainer rightPad">
                         <p>Não encontramos outra utilidade nesta geografia ausente.
@@ -153,9 +308,9 @@
             <div class="teaser">
                 <video autoplay loop muted>
                     <source src="data/teaser_crop.mp4" type="video/mp4">
-                  </video>
+                </video>
             </div>
-            <div class="grid">
+            <div class="grid gridOutro">
                 <div>
                     <p>Vídeo-álbum<br>inspirado na<br>obra<br>
                         “Selvagem”, de<br>
@@ -163,7 +318,7 @@
                     <p class="textAlignRight">Dom Quixote</p>
                     <p>2021</p>
                 </div>
-                <div>
+                <div class="mobileRow2">
                     <p>Direcção<br>Artística:<br>
                         Marco Martins</p>
                     <p class="textAlignRight">e</p>
@@ -281,9 +436,9 @@
                     <p>instrumentos</p>
                     <p class="textAlignRight">JP Custom Guitars</p>
                     <a href="https://jpcustomguitars.pt/" target="_blank">
-                    <p>www.<br>jpcustomguitars</p>
-                    <p class="textAlignRight">.pt</p>
-                </a>
+                        <p>www.<br>jpcustomguitars</p>
+                        <p class="textAlignRight">.pt</p>
+                    </a>
                     <p>A Mákina de</p>
                     <p class="textAlignRight">Cena</p>
                     <p>é ums estrutura<br>financiada pela</p>
@@ -293,19 +448,17 @@
                 <div>
                     <p>Reservados todos os direitos do produtor fonográfico e do proprietário da obra gravada,</p>
                     <p class="textAlignRight">proibidos</p>
-                    <p>a<br>duplicação, o 
-                        aluguer, o empréstimo e a  utilização da gravação para execução pública </p>
-                        <p class="textAlignRight">e radiodifusão</p>
-                        <p>não autorizados</p>
+                    <p>a<br>duplicação, o
+                        aluguer, o empréstimo e a utilização da gravação para execução pública </p>
+                    <p class="textAlignRight">e radiodifusão</p>
+                    <p>não autorizados</p>
                 </div>
             </div>
         </div>
     </main>
-
     <div id="cursor"></div>
-    <script src="js/cursor.js"></script>
     <script src="js/mobileWeight.js"></script>
     <script src="script_v2.js"></script>
+    <script src="js/script_final.js"></script>
 </body>
-
 </html>

@@ -14,3 +14,4 @@ buttonStart.addEventListener('click', () => {
         }, 50); 
     }, 400); 
 });
+
