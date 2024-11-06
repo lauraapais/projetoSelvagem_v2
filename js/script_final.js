@@ -274,9 +274,10 @@ divLeft.addEventListener('touchmove', (e) => {
 });
 
 faixaElements.forEach(faixa => {
+    console.log(faixa);
     faixa.addEventListener('click', () => {
         if (!interactionEnabled) return; 
-
+        
         const trackId = faixa.getAttribute('data-track');
         const trackElement = document.getElementById(trackId);
 
