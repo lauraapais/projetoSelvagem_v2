@@ -354,6 +354,6 @@ function resetInactivityTimer() {
 }
 
 window.addEventListener('mousemove', resetInactivityTimer);
-
+window.addEventListener('touchmove', resetInactivityTimer);
 hideInteractions();
 
