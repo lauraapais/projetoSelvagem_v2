@@ -129,12 +129,11 @@ main {
 .divLeft {
     position: absolute;
     top: 0;
-    height: calc(var(--vh, 1h)* 100 - 60px);
+    height: calc(var(--vh, 1h)* 100);
     width: 60px;
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     align-items: center;
-    margin: 30px 0;
 }
 
 .divRight div,
@@ -148,9 +147,9 @@ main {
     transition: all .2s ease-in-out
 }
 
-.divRight div:last-child,
-.divLeft div:last-child{
-    border-bottom: 1px solid white;
+.divRight div:first-child,
+.divLeft div:first-child{
+    border-top: none!important;
 }
 
 .divRight div:hover,
@@ -166,6 +165,9 @@ main {
     border-right: 3px solid #ED1C24;
     transition: all .2s ease-in-out
 }
+
+
+
 
 .divRight{
     justify-items: end;
