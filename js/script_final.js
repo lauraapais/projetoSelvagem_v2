@@ -349,3 +349,4 @@ function resetInactivityTimer() {
 window.addEventListener('mousemove', resetInactivityTimer);
 
 hideInteractions();
+
