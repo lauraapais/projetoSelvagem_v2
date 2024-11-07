@@ -1,24 +1,5 @@
-const buttonStart = document.getElementById('buttonStart');
-const introSelvagem = document.getElementById('introSelvagem');
-const selvagemProgram = document.getElementById('selvagemProgram');
-
-buttonStart.addEventListener('click', () => {
-    introSelvagem.style.opacity = '0';
-
-    setTimeout(() => {
-        introSelvagem.style.display = 'none';
-        selvagemProgram.style.display = 'block';
-
-        setTimeout(() => {
-            selvagemProgram.style.opacity = '1';
-        }, 50);
-    }, 400);
-});
-
-
-
 const startButton = document.getElementById('startButton');
-let currentTrack = document.querySelector('.track1');
+let currentTrack = document.querySelector('.track1'); 
 
 let jazzAudio = currentTrack.querySelector('.jazz');
 let poesiaAudio = currentTrack.querySelector('.poesia');
@@ -29,23 +10,23 @@ const loadingText = document.getElementById('loadingText');
 
 const faixaElements = document.querySelectorAll('.faixa');
 faixaElements.forEach(faixa => {
-    faixa.setAttribute('disabled', true);
+    faixa.setAttribute('disabled', true); 
 });
 
 videoElement.style.display = 'none';
 legendasVideo.style.display = 'none';
 
-let interactionEnabled = false;
+let interactionEnabled = false; 
 
 function setInitialProgress() {
-    jazzAudio.volume = 0.7;
-    poesiaAudio.volume = 0.5;
+    jazzAudio.volume = 0.7; 
+    poesiaAudio.volume = 0.5; 
     videoElement.style.opacity = 1.0;
-    legendasVideo.style.opacity = 0.3;
+    legendasVideo.style.opacity = 0.3; 
 
     updateProgressBar(progressJazz, 0.7, true);
     updateProgressBar(progressPoesia, 0.5, false);
-    updateProgressBar(progressVideo, 1.0, false);
+    updateProgressBar(progressVideo, 1.0, false); 
     updateProgressBar(progressLegendas, 0.3, true);
 }
 
@@ -65,7 +46,7 @@ function adjustCursorSize(value) {
 }
 
 function ensureMediaReady(mediaElement, callback) {
-    if (mediaElement.readyState >= 3) {
+    if (mediaElement.readyState >= 3) { 
         callback();
     } else {
         mediaElement.addEventListener('canplaythrough', callback, { once: true });
@@ -75,7 +56,7 @@ function ensureMediaReady(mediaElement, callback) {
 function checkMediaReady() {
     if (jazzAudio.readyState >= 3 && poesiaAudio.readyState >= 3 && videoElement.readyState >= 3 && legendasVideo.readyState >= 3) {
         loadingText.style.display = 'none';
-
+        
         videoElement.play();
         videoElement.style.display = 'block';
         videoElement.style.opacity = '1';
@@ -86,15 +67,15 @@ function checkMediaReady() {
         jazzAudio.play();
         poesiaAudio.play();
 
-        setInitialProgress();
+        setInitialProgress(); 
     }
 }
 
-buttonStart.addEventListener('click', () => {
-    interactionEnabled = true;
+startButton.addEventListener('click', () => {
+    interactionEnabled = true; 
 
     faixaElements.forEach(faixa => {
-        faixa.removeAttribute('disabled');
+        faixa.removeAttribute('disabled'); 
     });
 
     loadingText.style.display = 'block';
@@ -102,40 +83,41 @@ buttonStart.addEventListener('click', () => {
     if (!videoElement.src) {
         videoElement.src = videoElement.getAttribute('data-src');
     }
-    videoElement.load();
+    videoElement.load(); 
 
     if (!legendasVideo.src) {
         legendasVideo.src = legendasVideo.getAttribute('data-src');
     }
-    legendasVideo.load();
+    legendasVideo.load(); 
 
     ensureMediaReady(jazzAudio, checkMediaReady);
     ensureMediaReady(poesiaAudio, checkMediaReady);
     ensureMediaReady(videoElement, checkMediaReady);
     ensureMediaReady(legendasVideo, checkMediaReady);
 
+    startButton.style.display = 'none';
 });
 
 function stopCurrentTrack() {
     if (jazzAudio) {
         jazzAudio.pause();
-        jazzAudio.currentTime = 0;
+        jazzAudio.currentTime = 0; 
     }
     if (poesiaAudio) {
         poesiaAudio.pause();
-        poesiaAudio.currentTime = 0;
+        poesiaAudio.currentTime = 0; 
     }
     if (videoElement) {
         videoElement.pause();
-        videoElement.currentTime = 0;
-        videoElement.src = '';
-        videoElement.load();
+        videoElement.currentTime = 0; 
+        videoElement.src = ''; 
+        videoElement.load(); 
     }
     if (legendasVideo) {
         legendasVideo.pause();
-        legendasVideo.currentTime = 0;
-        legendasVideo.src = '';
-        legendasVideo.load();
+        legendasVideo.currentTime = 0; 
+        legendasVideo.src = ''; 
+        legendasVideo.load(); 
     }
 
     videoElement.style.display = 'none';
@@ -143,7 +125,7 @@ function stopCurrentTrack() {
 }
 
 function playTrack(trackElement) {
-    stopCurrentTrack();
+    stopCurrentTrack();  
 
     loadingText.style.display = 'block';
 
@@ -154,10 +136,10 @@ function playTrack(trackElement) {
     videoElement = currentTrack.querySelector('.video');
     legendasVideo = currentTrack.querySelector('.legendas');
 
-    videoElement.src = videoElement.getAttribute('data-src');
+    videoElement.src = videoElement.getAttribute('data-src'); 
     videoElement.load();
 
-    legendasVideo.src = legendasVideo.getAttribute('data-src');
+    legendasVideo.src = legendasVideo.getAttribute('data-src'); 
     legendasVideo.load();
 
     ensureMediaReady(jazzAudio, checkMediaReady);
@@ -185,7 +167,7 @@ function handleTouchMove(event, progressElement, adjustFunction, isHorizontal = 
 
     const touch = event.touches[0];
     const rect = progressElement.getBoundingClientRect();
-
+    
     if (isHorizontal) {
         const value = adjustValue(touch.clientX, rect.left + 50, rect.right - 50);
         adjustFunction(value);
@@ -211,14 +193,14 @@ divTop.addEventListener('mousemove', (e) => {
     const rect = divTop.getBoundingClientRect();
     const volume = adjustValue(e.clientX, rect.left + 50, rect.right - 50);
     jazzAudio.volume = volume;
-    updateProgressBar(progressJazz, volume, true);
+    updateProgressBar(progressJazz, volume, true); 
 
     cursor.style.width = `${2 + volume * 4}em`;
     cursor.style.height = `${2 + volume * 4}em`;
 });
 
 divTop.addEventListener('touchmove', (e) => {
-    if (!interactionEnabled) return;
+    if (!interactionEnabled) return; 
 
     handleTouchMove(e, divTop, (volume) => {
         jazzAudio.volume = volume;
@@ -242,7 +224,7 @@ divRight.addEventListener('touchmove', (e) => {
     if (!interactionEnabled) return;
 
     handleTouchMove(e, divRight, (opacity) => {
-        videoElement.style.opacity = 1 - opacity;
+        videoElement.style.opacity = 1 -opacity;
         updateProgressBar(progressVideo, 1 - opacity, false);
     }, false);
 });
@@ -270,19 +252,19 @@ divBottom.addEventListener('touchmove', (e) => {
 
 
 divLeft.addEventListener('mousemove', (e) => {
-    if (!interactionEnabled) return;
+    if (!interactionEnabled) return; 
 
     const rect = divLeft.getBoundingClientRect();
-    const volume = 1 - adjustValue(e.clientY, rect.top + 50, rect.bottom - 50);
+    const volume = 1 - adjustValue(e.clientY, rect.top + 50, rect.bottom - 50); 
     poesiaAudio.volume = volume;
-    updateProgressBar(progressPoesia, volume, false);
+    updateProgressBar(progressPoesia, volume, false); 
 
     cursor.style.width = `${2 + volume * 4}em`;
     cursor.style.height = `${2 + volume * 4}em`;
 });
 
 divLeft.addEventListener('touchmove', (e) => {
-    if (!interactionEnabled) return;
+    if (!interactionEnabled) return; 
 
     handleTouchMove(e, divLeft, (volume) => {
         volume = 1 - volume;
@@ -294,12 +276,12 @@ divLeft.addEventListener('touchmove', (e) => {
 faixaElements.forEach(faixa => {
     console.log(faixa);
     faixa.addEventListener('click', () => {
-        if (!interactionEnabled) return;
-
+        if (!interactionEnabled) return; 
+        
         const trackId = faixa.getAttribute('data-track');
         const trackElement = document.getElementById(trackId);
 
-        playTrack(trackElement);
+        playTrack(trackElement); 
     });
 });
 
@@ -317,35 +299,19 @@ hoverLinks.forEach((link) => {
     });
 });
 
+const buttonStart = document.getElementById('buttonStart');
+const introSelvagem = document.getElementById('introSelvagem');
+const selvagemProgram = document.getElementById('selvagemProgram');
 
+buttonStart.addEventListener('click', () => {
+    introSelvagem.style.opacity = '0';
 
+    setTimeout(() => {
+        introSelvagem.style.display = 'none';
+        selvagemProgram.style.display = 'block';
 
-const interactionDivs = document.querySelectorAll('.interation');
-
-function showInteractions() {
-    interactionDivs.forEach(div => {
-        div.classList.add('active');
-        div.classList.remove('hidden');
-    });
-}
-
-function hideInteractions() {
-    interactionDivs.forEach(div => {
-        div.classList.add('hidden');
-        div.classList.remove('active');
-    });
-}
-
-let inactivityTimer;
-
-function resetInactivityTimer() {
-    showInteractions();
-
-    clearTimeout(inactivityTimer);
-
-    inactivityTimer = setTimeout(hideInteractions, 1000);
-}
-
-window.addEventListener('mousemove', resetInactivityTimer);
-
-hideInteractions();
+        setTimeout(() => {
+            selvagemProgram.style.opacity = '1';
+        }, 50); 
+    }, 400); 
+});
