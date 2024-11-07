@@ -42,11 +42,11 @@ function setInitialProgress() {
     poesiaAudio.volume = 0.5;
     videoElement.style.opacity = 1.0;
     legendasVideo.style.opacity = 0.3;
-
+/*
     updateProgressBar(progressJazz, 0.7, true);
     updateProgressBar(progressPoesia, 0.5, false);
     updateProgressBar(progressVideo, 1.0, false);
-    updateProgressBar(progressLegendas, 0.3, true);
+    updateProgressBar(progressLegendas, 0.3, true);*/
 }
 
 
@@ -171,14 +171,14 @@ function adjustValue(position, start, end) {
     if (position > end) return 1;
     return (position - start) / (end - start);
 }
-
+/*
 function updateProgressBar(progressElement, value, isHorizontal = true) {
     if (isHorizontal) {
         progressElement.style.width = (value * 100) + '%';
     } else {
         progressElement.style.height = (value * 100) + '%';
     }
-}
+}*/
 
 function handleTouchMove(event, progressElement, adjustFunction, isHorizontal = true) {
     if (!interactionEnabled) return;
@@ -211,7 +211,7 @@ divTop.addEventListener('mousemove', (e) => {
     const rect = divTop.getBoundingClientRect();
     const volume = adjustValue(e.clientX, rect.left + 50, rect.right - 50);
     jazzAudio.volume = volume;
-    updateProgressBar(progressJazz, volume, true);
+   /* updateProgressBar(progressJazz, volume, true);*/
 
     cursor.style.width = `${2 + volume * 4}em`;
     cursor.style.height = `${2 + volume * 4}em`;
@@ -232,7 +232,7 @@ divRight.addEventListener('mousemove', (e) => {
     const rect = divRight.getBoundingClientRect();
     const opacity = 1 - adjustValue(e.clientY, rect.top + 50, rect.bottom - 50);
     videoElement.style.opacity = opacity;
-    updateProgressBar(progressVideo, opacity, false);
+  /* updateProgressBar(progressVideo, opacity, false);*/
 
     cursor.style.width = `${2 + opacity * 4}em`;
     cursor.style.height = `${2 + opacity * 4}em`;
@@ -243,7 +243,7 @@ divRight.addEventListener('touchmove', (e) => {
 
     handleTouchMove(e, divRight, (opacity) => {
         videoElement.style.opacity = 1 - opacity;
-        updateProgressBar(progressVideo, 1 - opacity, false);
+        /*updateProgressBar(progressVideo, 1 - opacity, false);*/
     }, false);
 });
 
@@ -253,7 +253,7 @@ divBottom.addEventListener('mousemove', (e) => {
     const rect = divBottom.getBoundingClientRect();
     const opacity = adjustValue(e.clientX, rect.left + 50, rect.right - 50);
     legendasVideo.style.opacity = opacity;
-    updateProgressBar(progressLegendas, opacity, true);
+    /*updateProgressBar(progressLegendas, opacity, true);*/
 
     cursor.style.width = `${2 + opacity * 4}em`;
     cursor.style.height = `${2 + opacity * 4}em`;
@@ -264,7 +264,7 @@ divBottom.addEventListener('touchmove', (e) => {
 
     handleTouchMove(e, divBottom, (opacity) => {
         legendasVideo.style.opacity = opacity;
-        updateProgressBar(progressLegendas, opacity, true);
+       /* updateProgressBar(progressLegendas, opacity, true);*/
     }, true);  // A interação na divBottom é horizontal, então passamos true
 });
 
@@ -275,7 +275,7 @@ divLeft.addEventListener('mousemove', (e) => {
     const rect = divLeft.getBoundingClientRect();
     const volume = 1 - adjustValue(e.clientY, rect.top + 50, rect.bottom - 50);
     poesiaAudio.volume = volume;
-    updateProgressBar(progressPoesia, volume, false);
+   /*updateProgressBar(progressPoesia, volume, false);*/
 
     cursor.style.width = `${2 + volume * 4}em`;
     cursor.style.height = `${2 + volume * 4}em`;
@@ -287,7 +287,7 @@ divLeft.addEventListener('touchmove', (e) => {
     handleTouchMove(e, divLeft, (volume) => {
         volume = 1 - volume;
         poesiaAudio.volume = volume;
-        updateProgressBar(progressPoesia, volume, false);
+        /*updateProgressBar(progressPoesia, volume, false);*/
     }, false);
 });
 
