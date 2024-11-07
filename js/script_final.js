@@ -297,6 +297,7 @@ divLeft.addEventListener('touchmove', (e) => {
 
 
 
+
 faixaElements.forEach(faixa => {
     console.log(faixa);
     faixa.addEventListener('click', () => {
