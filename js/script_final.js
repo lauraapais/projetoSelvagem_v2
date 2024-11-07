@@ -350,10 +350,32 @@ function resetInactivityTimer() {
 
     clearTimeout(inactivityTimer);
 
-    inactivityTimer = setTimeout(hideInteractions, 1000);
+    inactivityTimer = setTimeout(hideInteractions, 2000);
 }
 
 window.addEventListener('mousemove', resetInactivityTimer);
 window.addEventListener('touchmove', resetInactivityTimer);
 hideInteractions();
 
+
+
+//Feedback Interação Programa
+const touchDivs = document.querySelectorAll('.divTop div, .divBottom div, .divRight div, .divLeft div');
+
+function activateDiv(event) {
+    const touchedDiv = event.target;
+    if (touchedDiv.classList.contains('divTop') || touchedDiv.classList.contains('divBottom') || 
+        touchedDiv.classList.contains('divRight') || touchedDiv.classList.contains('divLeft')) {
+        touchedDiv.classList.add('active');
+    }
+}
+
+function deactivateDiv(event) {
+    const touchedDiv = event.target;
+    touchedDiv.classList.remove('active');
+}
+
+touchDivs.forEach(div => {
+    div.addEventListener('touchstart', activateDiv);
+    div.addEventListener('touchend', deactivateDiv);
+});
