@@ -147,6 +147,10 @@ main {
     transition: all .2s ease-in-out
 }
 
+.divRight div:first-child,
+.divLeft div:first-child {
+    border:none!important;
+}
 
 .divRight div:hover,
 .divLeft div:hover{
