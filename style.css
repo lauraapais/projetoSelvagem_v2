@@ -101,12 +101,12 @@ main {
 
 .divTop div,
 .divBottom div {
-    border-right: 1px solid azure;
+    border-right: 1px solid white;
     height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: height .2s ease-in-out
+    transition: all .2s ease-in-out
 
 }
 
@@ -145,26 +145,26 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: width .2s ease-in-out
+    transition: all .2s ease-in-out
 }
 
 .divRight div:last-child,
 .divLeft div:last-child{
     border-bottom: 1px solid white;
-
 }
 
 .divRight div:hover,
 .divLeft div:hover{
     width: 100%;
-    transition: width .2s ease-in-out
+    border-top: 3px solid #ED1C24;
+    transition: all .2s ease-in-out
 }
-
 
 .divTop div:hover,
 .divBottom div:hover{
     height: 100%;
-    transition: height .2s ease-in-out
+    border-right: 3px solid #ED1C24;
+    transition: all .2s ease-in-out
 }
 
 .divRight{
@@ -174,7 +174,6 @@ main {
 .divLeft{
     justify-items: start;
 }
-
 
 #progressTop {
     left: 0;
@@ -199,7 +198,6 @@ main {
     text-align: center;
     padding: 0;
     margin: 0;
-
 }
 
 #progressBottom {
@@ -211,7 +209,6 @@ main {
     bottom: 0;
     width: 100%;
 }
-
 
 .divLeft p,
 .divRight p {
