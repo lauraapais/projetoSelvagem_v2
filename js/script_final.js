@@ -2,18 +2,8 @@ const buttonStart = document.getElementById('buttonStart');
 const introSelvagem = document.getElementById('introSelvagem');
 const selvagemProgram = document.getElementById('selvagemProgram');
 
-buttonStart.addEventListener('click', () => {
-    introSelvagem.style.opacity = '0';
-
-    setTimeout(() => {
-        introSelvagem.style.display = 'none';
-        selvagemProgram.style.display = 'block';
-
-        setTimeout(() => {
-            selvagemProgram.style.opacity = '1';
-        }, 50);
-    }, 400);
-});
+/*buttonStart.addEventListener('click', () => {
+});*/
 
 
 
@@ -91,6 +81,19 @@ function checkMediaReady() {
 }
 
 buttonStart.addEventListener('click', () => {
+    introSelvagem.style.opacity = '0';
+
+    setTimeout(() => {
+        introSelvagem.style.display = 'none';
+        selvagemProgram.style.display = 'block';
+
+        setTimeout(() => {
+            selvagemProgram.style.opacity = '1';
+        }, 50);
+    }, 400);
+
+
+
     interactionEnabled = true;
 
     faixaElements.forEach(faixa => {
@@ -299,10 +302,10 @@ divLeft.addEventListener('touchmove', (e) => {
 
 
 faixaElements.forEach(faixa => {
-    console.log(faixa);
+    console.log("TESTE 123", faixa);
     faixa.addEventListener('click', () => {
+        console.log("TESTE");
         if (!interactionEnabled) return;
-
         const trackId = faixa.getAttribute('data-track');
         const trackElement = document.getElementById(trackId);
 
@@ -326,7 +329,7 @@ hoverLinks.forEach((link) => {
 
 
 
-
+/*
 const interactionDivs = document.querySelectorAll('.interation');
 
 function showInteractions() {
@@ -357,25 +360,4 @@ window.addEventListener('mousemove', resetInactivityTimer);
 window.addEventListener('touchmove', resetInactivityTimer);
 hideInteractions();
 
-
-
-//Feedback Interação Programa
-const touchDivs = document.querySelectorAll('.divTop div, .divBottom div, .divRight div, .divLeft div');
-
-function activateDiv(event) {
-    const touchedDiv = event.target;
-    if (touchedDiv.classList.contains('divTop') || touchedDiv.classList.contains('divBottom') || 
-        touchedDiv.classList.contains('divRight') || touchedDiv.classList.contains('divLeft')) {
-        touchedDiv.classList.add('active');
-    }
-}
-
-function deactivateDiv(event) {
-    const touchedDiv = event.target;
-    touchedDiv.classList.remove('active');
-}
-
-touchDivs.forEach(div => {
-    div.addEventListener('touchstart', activateDiv);
-    div.addEventListener('touchend', deactivateDiv);
-});
+*/
