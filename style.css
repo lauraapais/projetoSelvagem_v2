@@ -63,6 +63,7 @@ main {
 }
 
 
+
 .progress {
     background-color: var(--text);
     position: absolute;
@@ -77,7 +78,10 @@ main {
     z-index: 500 !important;
 }
 
-
+.active-track {
+    font-weight: bold;
+  }
+  
 
 .divTop {
     position: absolute;

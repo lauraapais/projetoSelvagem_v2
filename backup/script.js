@@ -1,4 +1,4 @@
-const startButton = document.getElementById('startButton');
+const startButton = document.getElementById('buttonStart');
 let currentTrack = document.querySelector('.track1'); 
 
 let jazzAudio = currentTrack.querySelector('.jazz');

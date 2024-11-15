@@ -81,7 +81,6 @@ main{
     justify-content: flex-end;
     border-bottom: white solid 1px;
     justify-content: center;
-    z-index: 1;
 }
 
 #progressTop{
@@ -103,7 +102,6 @@ main{
     justify-content: center;
     align-items: flex-end;
     border-left: white solid 1px;
-    z-index: 1;
 }
 
 .divRight p{
@@ -130,7 +128,6 @@ main{
     bottom: 0;
     border-top: white solid 1px;
     justify-content: center;
-    z-index: 1;
 }
 
 #progressBottom{
@@ -147,7 +144,6 @@ main{
     justify-content: center;
     align-items:  flex-end;
     border-right: white solid 1px;
-    z-index: 1;
 }
 
 
